@@ -1,0 +1,8 @@
+
+<div *ngFor="let profileOption of profileOptions; let i = index">
+  <input id="profileOption{{i}}" name="selectedProfile" type="radio"
+    [value]="profileOption" [(ngModel)]="selectedProfile"
+    (change)="pt(selectedProfile)"  />
+  <label for="profileOption{{i}}">{{profileOption}}</label>
+</div>
+<div>Your favorite season is: {{selectedProfile}}</div>
